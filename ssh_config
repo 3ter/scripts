@@ -1,0 +1,6 @@
+# add this to your ~/.ssh/config
+# Include ~/scripts/ssh_config
+
+ControlMaster       auto
+ControlPath         /var/tmp/ssh_mux_%h_%p_%r
+ControlPersistent   1h
