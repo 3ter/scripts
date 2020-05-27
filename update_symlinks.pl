@@ -38,6 +38,7 @@ use constant SYMLINKS => {
     '/home/dennis/ecos/ecos_start_vpn.pl'       =>  '/home/dennis/.local/bin/ecos_mos',
     '/home/dennis/scripts/extended_history.sh'  =>  '/etc/profile.d/extended_history.sh',
     '/home/dennis/scripts/.vimrc'               =>  '/home/dennis/.vimrc',
+    '/home/dennis/scripts/.bash_aliases'        =>  '/home/dennis/.bash_aliases',
 };
 
 foreach my $target (keys %{ SYMLINKS() }) {
