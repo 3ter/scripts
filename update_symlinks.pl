@@ -33,8 +33,10 @@ sub update_symlink {
     return;
 }
 
+#   TARGET (actual file)                            SYMLINK (where it should appear)
 use constant SYMLINKS => {
-    '/home/dennis/ecos/ecos_start_vpn.pl' => '/home/dennis/.local/bin/ecos_mos',
+    '/home/dennis/ecos/ecos_start_vpn.pl'       =>  '/home/dennis/.local/bin/ecos_mos',
+    '/home/dennis/scripts/extended_history.sh'  =>  '/etc/profile.d/extended_history.sh',
 };
 
 foreach my $target (keys %{ SYMLINKS() }) {
