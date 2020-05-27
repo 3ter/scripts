@@ -4,6 +4,8 @@ use strict;
 use warnings;
 use v5.30;
 
+use Term::ANSIColor;
+
 sub update_symlink {
     my ($arg_ref) = @_;
 
@@ -16,20 +18,23 @@ sub update_symlink {
     }
 
     if (-l $link && -e $link) {
-        say 'Link exists and is valid';
+        say colored('Link exists and is valid', 'green');
         return 0;
     }
     elsif (-l $link && !(-e $link)) {
-        say 'Link exists but is invalid, removing bad link: ' . $link;
-        say qx(/usr/bin/rm $link);
+        say colored('Link exists but is invalid, removing bad link: ' . $link, 'bright_red');
+        my $ln_output = qx(/usr/bin/rm $link);
+        say colored($ln_output, 'bright_red') if $ln_output;
     }
     
     if (!(-e $target)) {
-        say "Can't create link for non existing target: $target";
+        say colored("Can't create link for non existing target: $target", 'red');
         return 1;
     }
 
-    say qx(/usr/bin/ln -s $target $link);
+    say colored("Creating $link", 'bright_green');
+    my $ln_output = qx(/usr/bin/ln -s $target $link);
+    say colored($ln_output, 'bright_red') if $ln_output;
     return;
 }
 
