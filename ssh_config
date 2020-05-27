@@ -1,5 +1,7 @@
 # add this to your ~/.ssh/config
 # Include ~/scripts/ssh_config
+#
+# I've taken that from http://www.streppone.it/cosimo/blog/2020/05/five-tips-to-be-a-more-effective-command-line-user/
 
 ControlMaster       auto
 ControlPath         /var/tmp/ssh_mux_%h_%p_%r
