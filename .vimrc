@@ -23,6 +23,12 @@ Plugin 'NLKNguyen/papercolor-theme'
 " https://github.com/vim-airline/vim-airline
 Plugin 'vim-airline/vim-airline'
 
+" https://github.com/itchyny/vim-highlighturl
+Plugin 'itchyny/vim-highlighturl'
+
+" https://github.com/dhruvasagar/vim-open-url
+Plugin 'dhruvasagar/vim-open-url'
+
 " All of your Plugins must be added before the following line
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()            " required

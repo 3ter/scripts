@@ -33,6 +33,9 @@ sub update_symlink {
     return;
 }
 
+# One day I have to think about how to use both the path completion and $ENV{"HOME"}
+# https://stackoverflow.com/questions/1475357/how-do-i-find-a-users-home-directory-in-perl
+#
 #   TARGET (actual file)                            SYMLINK (where it should appear)
 use constant SYMLINKS => {
     '/home/dennis/ecos/ecos_start_vpn.pl'       =>  '/home/dennis/.local/bin/ecos_mos',
