@@ -5,4 +5,4 @@
 
 ControlMaster       auto
 ControlPath         /var/tmp/ssh_mux_%h_%p_%r
-ControlPersistent   1h
+ControlPersist   1h
