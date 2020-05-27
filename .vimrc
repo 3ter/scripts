@@ -45,6 +45,8 @@ set shiftwidth=4
 set smartindent
 set expandtab
 
+set linebreak
+
 " Color
 set t_Co=256   " This is may or may not needed.
 
@@ -54,4 +56,3 @@ set background=dark
 :silent! colorscheme PaperColor 
 
 set number
-" set laststatus=2
