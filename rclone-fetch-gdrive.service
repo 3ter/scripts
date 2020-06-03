@@ -1,0 +1,10 @@
+[Unit]
+Description=Download the latest changes from Googledrive to the local folder (restarted every 30 minutes) 
+
+[Service]
+Restart=always
+RestartSec=30m
+ExecStart=/usr/bin/sh /home/dennis/Documents/scripts/rclone_remote2local.sh
+
+[Install]
+WantedBy=default.target

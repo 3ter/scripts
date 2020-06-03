@@ -1,0 +1,8 @@
+[Unit]
+Description=Sync Googledrive with the local folder on startup and shutdown (see the cronjob 'rclone-gdrive-cron' as well)
+
+[Service]
+ExecStart=/usr/bin/perl /home/dennis/scripts/rclone_watch_local.pl
+
+[Install]
+WantedBy=default.target

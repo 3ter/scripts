@@ -1,0 +1,8 @@
+[Unit]
+Description=Watch the googledrive directory for changes and push them to the remote (at max every 10 minutes)
+
+[Service]
+ExecStart=/usr/bin/sh /home/dennis/Documents/scripts/rclone_watch_local.sh
+
+[Install]
+WantedBy=default.target
