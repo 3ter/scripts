@@ -53,6 +53,8 @@ set expandtab
 
 set linebreak
 
+syntax on
+
 " Color
 set t_Co=256   " This is may or may not needed.
 
