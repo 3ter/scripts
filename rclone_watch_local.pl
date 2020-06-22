@@ -8,7 +8,7 @@ use English;
 use Getopt::Long;
 
 my $is_first_sync = 0;
-GetOptions ('first-sync' => \$is_first_sync) or die("Error in command line arguments\n");;
+GetOptions ('first-sync' => \$is_first_sync) or die("Error in command line arguments\n");
 
 our $local_dir      = '/home/dennis/googledrive/Sicherheit';
 our $remote_dir     = 'googledrive:/Sicherheit';
